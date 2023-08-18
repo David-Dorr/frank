@@ -1,0 +1,14 @@
+version: 1
+
+indices:
+  europe:
+    target: /europe-index
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      council:
+        select: head > meta[property="council"]
+        value: |
+          match(attribute(el, 'content'), 'europe')
