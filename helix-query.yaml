@@ -9,6 +9,6 @@ indices:
         value: |
           attribute(el, 'content')
       council:
-        select: head > meta[property="council"]
+        select: head > meta[name="council"]
         value: |
           match(attribute(el, 'content'), 'europe')
