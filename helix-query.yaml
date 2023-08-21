@@ -1,9 +1,9 @@
-version: 2
+version: 3
 indices:
   default: &default
     include:
       - /**
-    target: /query-index.json
+    target: /query-index
     properties: 
       title:
         select: head > meta[property="og:title"]
@@ -21,12 +21,12 @@ indices:
     <<: *default
     include:
       - /**
-    target: /europe/query-index.json
+    target: /europe/query-index
   north-america:
     <<: *default
     include:
       - /**
-    target: /north-america/query-index.json
+    target: /north-america/query-index
     
 
 
